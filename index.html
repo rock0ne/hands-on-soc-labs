@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hands On lab packs</title>
+<meta name="description" content="Companion lab packs for Hands On: Being a SOC Analyst in the Age of AI, by Rockson Arthur.">
+<style>
+:root{--bg:#F7F8FA;--fg:#16212F;--muted:#4A5868;--card:#FFFFFF;--line:#D9DEE5;--accent:#B26A00;--btn:#16212F;--btnfg:#FFFFFF}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#10171F;--fg:#E8ECF1;--muted:#A9B4C1;--card:#16212F;--line:#2A3646;--accent:#F0B24A;--btn:#F0B24A;--btnfg:#16212F}}
+:root[data-theme="dark"]{--bg:#10171F;--fg:#E8ECF1;--muted:#A9B4C1;--card:#16212F;--line:#2A3646;--accent:#F0B24A;--btn:#F0B24A;--btnfg:#16212F}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 Georgia,"Times New Roman",serif}
+main{max-width:760px;margin:0 auto;padding:40px 16px 64px}
+h1{font-size:2rem;line-height:1.2;margin:0 0 .3em}
+h2{font-size:1.25rem;margin:2em 0 .5em}
+.sub{color:var(--muted);font-style:italic;margin:0 0 1.5em}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:20px 22px;margin:1.2em 0}
+.btn{display:inline-block;background:var(--btn);color:var(--btnfg);text-decoration:none;font:600 16px/1 system-ui,sans-serif;padding:14px 20px;border-radius:8px;margin:6px 10px 6px 0}
+.small{font-size:.9rem;color:var(--muted)}
+code{font-family:Consolas,Menlo,monospace;font-size:.88em;overflow-wrap:anywhere}
+pre{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:12px 14px;overflow-x:auto;font-size:.85rem}
+a{color:var(--accent)}
+li{margin:.35em 0}
+.note{border-left:3px solid var(--accent);padding-left:14px}
+</style>
+</head>
+<body>
+<main>
+<h1>Hands On: lab packs</h1>
+<p class="sub">The companion download for <em>Hands On: Being a SOC Analyst in the Age of AI</em> by Rockson Arthur</p>
+
+<div class="card">
+<p><strong>Version 1.0</strong> · 4 November 2026 · one zip, 2.6 MB, labs for Chapters 6 to 28</p>
+<a class="btn" href="https://github.com/rock0ne/hands-on-soc-labs/releases/download/v1.0/hands-on-labs-v1.0.zip">Download the lab packs</a>
+<a class="btn" href="https://github.com/rock0ne/hands-on-soc-labs/releases/download/v1.0/hands-on-labs-v1.0-SHA256SUMS.txt">Hash list</a>
+<p class="small">SHA-256 of the zip: <code>361bdad74e3b8bd87f79acddc9678d652e448aea0ce1e4c9d8d4f319b67415af</code></p>
+</div>
+
+<h2>Everything here is fiction</h2>
+<p>Kestrel Freight Ltd, its people, systems and logs are invented for training. Every address is reserved for documentation or private, and every domain ends in <code>.example</code>, <code>.test</code> or <code>.invalid</code>. Nothing in the packs is malware or attack tooling. Because the data is synthetic, it's safe to use with an AI assistant.</p>
+
+<h2>How to start</h2>
+<ol>
+<li>Unzip the download. It holds one folder, <code>hands-on-labs</code>, with a folder per chapter.</li>
+<li>Read <code>README-FIRST.md</code>, then the <code>README.md</code> in the chapter you're working on.</li>
+<li>Check your copy by running <code>python -I verify.py</code> in a chapter's folder. It recomputes the numbers the chapter quotes and prints whether they pass.</li>
+</ol>
+<p>To check the whole download, compare its SHA-256 with the value above:</p>
+<pre>Windows PowerShell:  Get-FileHash hands-on-labs-v1.0.zip
+Linux or macOS:      sha256sum hands-on-labs-v1.0.zip</pre>
+<p>Inside the zip, <code>SHA256SUMS.txt</code> lists the hash of every file.</p>
+
+<h2>Chapter 11 and the EICAR test file</h2>
+<p class="note">This download doesn't yet include the EICAR test file that Chapter 11 uses. It will be added as a separate small download on this page. Everything else in the Chapter 11 pack is included. Do Chapter 11 in an isolated analysis VM, as the chapter says.</p>
+
+<h2>Rules that come with every pack</h2>
+<ul>
+<li>Don't query the real internet for any value in a pack. The lookups you need are simulated in the pack.</li>
+<li>Decode with deterministic tools, and never run decoded content.</li>
+<li>The data is dated in 2026. Replace <code>ago()</code> or relative time ranges with the fixed dates in the pack's README.</li>
+<li>Read an answer key only after you've committed to your own answers.</li>
+</ul>
+
+<p class="small">© 2026 Rockson Arthur. The lab packs accompany the book and are provided for personal training use.</p>
+</main>
+</body>
+</html>
